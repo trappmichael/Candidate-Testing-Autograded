@@ -45,22 +45,16 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  
-  for (let i = 0; i < questions.length; i++) {
-    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-      console.log(`Question ${i+1}: Your answer "${candidateAnswers[i]}" is correct!`);
-    } else {
-      console.log(`Question ${i+1}: Your answer "${candidateAnswers[i]}" is incorrect! The correct answer is "${correctAnswers[i]}."`);
-    }
-  }
-
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
   let points = 0;
-  
+
   for (let i = 0; i < questions.length; i++) {
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       points += 1;
+      console.log(`Question ${i+1}: Your answer "${candidateAnswers[i]}" is correct!`);
+    } else {
+      console.log(`Question ${i+1}: Your answer "${candidateAnswers[i]}" is incorrect! The correct answer is "${correctAnswers[i]}."`);
     }
   }
 
